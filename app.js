@@ -30,8 +30,8 @@ const audiences = c.audiences.map(([title, text]) => `
 const cooperation = c.cooperation.items.map((x, i) =>
   `<li${i === 1 || i === 4 ? ' class="cooperation-highlight"' : ""}>${x}</li>`
 ).join("");
-const priceRows = c.price.map(([title, text]) => `
-  <div class="strategy-row"><strong>${title}</strong><p>${text}</p></div>`).join("");
+const priceRows = c.price.map(([title, text], i) => `
+  <div class="strategy-row${i === 3 ? " strategy-highlight" : ""}"><strong>${title}</strong><p>${text}</p></div>`).join("");
 const showing = c.showing.map(([title, text], i) => `
   <div class="step"><span>0${i + 1}</span><div><h3>${title}</h3><p>${text}</p></div></div>`).join("");
 

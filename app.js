@@ -69,9 +69,6 @@ main.innerHTML = `
   </section>
 
   <section class="project-entry">
-    <div class="project-entry-image">
-      <img src="assets/project/garden-lounge.png" alt="天澜海岸园林与架空层实景" loading="lazy">
-    </div>
     <div class="project-entry-copy">
       <p class="eyebrow">ABOUT THE COMMUNITY</p>
       <h2>不止一线江景<br>更是一座完整社区</h2>

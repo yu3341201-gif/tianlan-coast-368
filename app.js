@@ -68,6 +68,18 @@ main.innerHTML = `
     <div class="vista" aria-hidden="true"><div class="sun"></div><div class="skyline"></div><div class="water"></div></div>
   </section>
 
+  <section class="project-entry">
+    <div class="project-entry-image">
+      <img src="assets/project/garden-lounge.png" alt="天澜海岸园林与架空层实景" loading="lazy">
+    </div>
+    <div class="project-entry-copy">
+      <p class="eyebrow">ABOUT THE COMMUNITY</p>
+      <h2>不止一线江景<br>更是一座完整社区</h2>
+      <p>从滨水区位、建筑立面，到园林、公区与归家动线，进一步了解天澜海岸的项目价值。</p>
+      <a href="project.html">了解天澜海岸 <span>→</span></a>
+    </div>
+  </section>
+
   <section id="highlights" class="section">
     <div class="section-heading split">
       <div><p class="eyebrow dark">DISTINCTIVE VALUES</p><h2>六大核心价值</h2></div>

@@ -6,7 +6,7 @@
 
 用记事本或任意代码编辑器打开 `content.js`。所有房源资料、卖点、价格口径及联系方式都集中在该文件中。修改中文内容后保存，再重新上传整个文件夹即可。
 
-需要更换风格时编辑 `styles.css`；页面结构位于 `index.html` 和 `app.js`。
+需要更换风格时编辑 `styles.css`；页面结构位于 `index.html` 和 `app.js`。项目介绍二级页面位于 `project.html`，对应样式为 `project.css`，图片存放在 `assets/project/`。
 
 ## 本地预览
 

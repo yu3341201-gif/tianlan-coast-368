@@ -1,6 +1,11 @@
 const c = window.SITE_CONTENT;
 const main = document.querySelector("main");
 
+const trackEvent = (action, label) => {
+  window._hmt = window._hmt || [];
+  window._hmt.push(["_trackEvent", "website", action, label]);
+};
+
 // Mobile browsers (including WeChat) may restore a previous scroll offset on load.
 // Force fresh page opens to start at the hero section.
 if ("scrollRestoration" in history) {
@@ -111,3 +116,43 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
 }, { threshold: 0.12 });
 document.querySelectorAll(".section-heading, .fact, .highlight, .audience, .step, .strategy-row").forEach(el => observer.observe(el));
+
+document.addEventListener("click", event => {
+  const link = event.target.closest("a[href]");
+  if (!link) return;
+
+  const target = link.getAttribute("href");
+  if (target === "#contact") {
+    trackEvent("contact_entry_click", link.textContent.trim());
+  } else if (target?.startsWith("#")) {
+    trackEvent("navigation_click", target);
+  }
+});
+
+const contactSection = document.querySelector("#contact");
+if (contactSection) {
+  const contactObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      trackEvent("contact_section_view", "contact");
+      contactObserver.disconnect();
+    }
+  }, { threshold: 0.5 });
+  contactObserver.observe(contactSection);
+}
+
+const reachedDepths = new Set();
+const trackScrollDepth = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  if (scrollable <= 0) return;
+
+  const depth = Math.min(100, Math.round((window.scrollY / scrollable) * 100));
+  [25, 50, 75, 100].forEach(mark => {
+    if (depth >= mark && !reachedDepths.has(mark)) {
+      reachedDepths.add(mark);
+      trackEvent("scroll_depth", `${mark}%`);
+    }
+  });
+};
+
+window.addEventListener("scroll", trackScrollDepth, { passive: true });
+trackScrollDepth();

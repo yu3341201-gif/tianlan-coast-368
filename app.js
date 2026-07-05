@@ -27,7 +27,9 @@ const highlights = c.highlights.map(x => `
   <article class="highlight"><span>${x.n}</span><h3>${x.title}</h3><p>${x.text}</p></article>`).join("");
 const audiences = c.audiences.map(([title, text]) => `
   <article class="audience"><h3>${title}</h3><p>${text}</p></article>`).join("");
-const cooperation = c.cooperation.items.map(x => `<li>${x}</li>`).join("");
+const cooperation = c.cooperation.items.map((x, i) =>
+  `<li${i === 1 || i === 4 ? ' class="cooperation-highlight"' : ""}>${x}</li>`
+).join("");
 const priceRows = c.price.map(([title, text]) => `
   <div class="strategy-row"><strong>${title}</strong><p>${text}</p></div>`).join("");
 const showing = c.showing.map(([title, text], i) => `

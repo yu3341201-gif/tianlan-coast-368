@@ -1,6 +1,21 @@
 const c = window.SITE_CONTENT;
 const main = document.querySelector("main");
 
+// Mobile browsers (including WeChat) may restore a previous scroll offset on load.
+// Force fresh page opens to start at the hero section.
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+const resetInitialScroll = () => {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+};
+
+window.addEventListener("pageshow", resetInitialScroll);
+requestAnimationFrame(resetInitialScroll);
+
 const factRows = c.facts.map(([label, value, note]) => `
   <div class="fact"><span>${label}</span><strong>${value}</strong><small>${note}</small></div>`).join("");
 const highlights = c.highlights.map(x => `

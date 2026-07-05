@@ -22,6 +22,8 @@ python -m http.server 8000
 
 将本文件夹整体上传至静态网站托管服务即可。入口文件为 `index.html`。
 
+当前自定义域名为 `tianlanhaian.cn`，GitHub Pages 通过根目录下的 `CNAME` 文件识别该域名。
+
 ## 数据统计
 
 网站已在 `index.html` 中接入百度统计和 Microsoft Clarity，并在 `app.js` 中记录导航点击、预约入口点击、联系方式区域到达及页面滚动深度事件。

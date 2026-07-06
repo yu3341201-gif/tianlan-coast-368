@@ -1,13 +1,13 @@
 ﻿:root{--ink:#142733;--deep:#102634;--cream:#f3efe7;--paper:#fbfaf7;--gold:#b1843e;--muted:#73838d}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif}
 img{display:block;max-width:100%}
 figure{margin:0}
 .sub-nav{height:76px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;position:absolute;inset:0 0 auto;z-index:5;color:#fff}
 .sub-brand{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
 .sub-brand span{width:48px;height:48px;border:1px solid rgba(255,255,255,.65);display:grid;place-items:center;letter-spacing:.12em}
-.sub-brand strong{font-family:"Noto Serif SC",serif}
+.sub-brand strong{font-family:"Songti SC","STSong","SimSun",serif}
 .back-link{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5);padding:8px 0}
 .back-link span{margin-left:12px}
 .eyebrow{margin:0;color:#d2ae70;font-size:11px;font-weight:600;letter-spacing:.28em}
@@ -17,11 +17,11 @@ figure{margin:0}
 .project-hero>picture,.project-hero>picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .project-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,24,34,.28),rgba(7,24,34,.12) 42%,rgba(7,24,34,.84))}
 .project-hero-copy{position:relative;z-index:2;width:min(930px,88vw);padding:0 7vw 10vh}
-.project-hero-copy h1{font:600 clamp(48px,7vw,92px)/1.18 "Noto Serif SC",serif;margin:24px 0}
+.project-hero-copy h1{font:600 clamp(48px,7vw,92px)/1.18 "Songti SC","STSong","SimSun",serif;margin:24px 0}
 .project-hero-copy>p:last-child{max-width:620px;color:#d4dde1;line-height:2}
 .project-hero small{position:absolute;z-index:2;right:3vw;bottom:24px;color:rgba(255,255,255,.65)}
 .intro{display:grid;grid-template-columns:1fr 1.2fr;gap:8vw}
-.intro h2,.section-heading h2,.split-heading h2{font:600 clamp(38px,4.5vw,64px)/1.4 "Noto Serif SC",serif;margin:22px 0}
+.intro h2,.section-heading h2,.split-heading h2{font:600 clamp(38px,4.5vw,64px)/1.4 "Songti SC","STSong","SimSun",serif;margin:22px 0}
 .intro-body{align-self:end;color:var(--muted);line-height:2}
 .wide-visual{position:relative;background:#0c202c}
 .wide-visual img{width:100%;max-height:850px;object-fit:cover}
@@ -53,7 +53,7 @@ figure{margin:0}
 .floorplan-visual img{width:100%;height:auto}
 .floorplan-note{max-width:1160px;margin:18px auto 0;color:#8999a2;font-size:11px;line-height:1.8}
 .project-cta{text-align:center;padding:150px 24px;background:#e9e1d2}
-.project-cta h2{font:600 clamp(40px,5vw,66px)/1.35 "Noto Serif SC",serif;margin:22px 0}
+.project-cta h2{font:600 clamp(40px,5vw,66px)/1.35 "Songti SC","STSong","SimSun",serif;margin:22px 0}
 .project-cta p:not(.eyebrow){color:var(--muted)}
 .project-cta a{display:inline-block;margin-top:34px;padding:16px 24px;background:var(--deep);color:#fff;text-decoration:none}
 .project-cta a span{margin-left:18px;color:#d2ae70}
